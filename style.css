@@ -1,41 +1,56 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  padding: 40px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  color: #333;
 }
 
-.keyboard {
-  display: inline-block;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.row {
-  margin: 10px 0;
+.topup-form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
-button {
-  margin: 5px;
-  padding: 15px 20px;
+.topup-form label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+.topup-form input,
+.topup-form select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 16px;
+}
+
+.topup-form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #007bff;
   border: none;
-  border-radius: 5px;
-  background-color: #ddd;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
-button:hover {
-  background-color: #bbb;
-}
-
-.space {
-  flex: 1;
-  padding-left: 60px;
-  padding-right: 60px;
+.topup-form button:hover {
+  background-color: #0056b3;
 }
