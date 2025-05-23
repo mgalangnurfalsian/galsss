@@ -3,37 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aplikasi Kasir Pro</title>
+  <title>Kasir Indomaret Style</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <div class="container">
-    <h1>Aplikasi Kasir Pro</h1>
+    <h1>Kasir Indomaret</h1>
 
-    <form id="kasirForm" autocomplete="off" novalidate>
-      <div class="form-group">
+    <form id="formBarang" autocomplete="off">
+      <div class="input-group">
         <label for="namaBarang">Nama Barang</label>
-        <input type="text" id="namaBarang" name="namaBarang" placeholder="Masukkan nama barang" required />
-        <small class="error-msg" id="errorNama"></small>
+        <input type="text" id="namaBarang" placeholder="Contoh: Susu Ultra" required />
       </div>
 
-      <div class="form-group">
+      <div class="input-group">
         <label for="hargaSatuan">Harga Satuan (Rp)</label>
-        <input type="number" id="hargaSatuan" name="hargaSatuan" placeholder="Masukkan harga satuan" min="1" required />
-        <small class="error-msg" id="errorHarga"></small>
+        <input type="number" id="hargaSatuan" placeholder="10000" min="1" required />
       </div>
 
-      <div class="form-group">
+      <div class="input-group">
         <label for="jumlah">Jumlah</label>
-        <input type="number" id="jumlah" name="jumlah" placeholder="Masukkan jumlah barang" min="1" required />
-        <small class="error-msg" id="errorJumlah"></small>
+        <input type="number" id="jumlah" placeholder="1" min="1" required />
       </div>
 
-      <button type="submit">Hitung Total</button>
+      <button type="submit" class="btn-add">Tambah ke Keranjang</button>
     </form>
 
-    <div class="result" id="hasil"></div>
+    <table id="tabelKeranjang">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Barang</th>
+          <th>Harga Satuan (Rp)</th>
+          <th>Jumlah</th>
+          <th>Subtotal (Rp)</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Item keranjang akan muncul di sini -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" style="text-align:right; font-weight:bold;">Total Bayar:</td>
+          <td id="totalBayar">Rp 0</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button id="btnBayar" class="btn-bayar" disabled>Bayar</button>
   </div>
 
   <script src="script.js"></script>
