@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keyboard Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Up Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="keyboard">
-    <div class="row">
-      <button>Q</button><button>W</button><button>E</button><button>R</button><button>T</button>
-      <button>Y</button><button>U</button><button>I</button><button>O</button><button>P</button>
-    </div>
-    <div class="row">
-      <button>A</button><button>S</button><button>D</button><button>F</button><button>G</button>
-      <button>H</button><button>J</button><button>K</button><button>L</button>
-    </div>
-    <div class="row">
-      <button>Z</button><button>X</button><button>C</button><button>V</button><button>B</button>
-      <button>N</button><button>M</button>
-    </div>
-    <div class="row">
-      <button><img src="images/icon.png" alt="icon" width="20"></button>
-      <button>123</button>
-      <button class="space">Space</button>
-      <button>Return</button>
-    </div>
+  <div class="container">
+    <h1>Top Up Game</h1>
+    <form class="topup-form">
+      <label for="userId">Masukkan ID Pengguna:</label>
+      <input type="text" id="userId" placeholder="Contoh: 123456789" required>
+
+      <label for="nominal">Pilih Nominal Top Up:</label>
+      <select id="nominal" required>
+        <option value="">-- Pilih Nominal --</option>
+        <option value="10000">10.000</option>
+        <option value="20000">20.000</option>
+        <option value="50000">50.000</option>
+        <option value="100000">100.000</option>
+      </select>
+
+      <button type="submit">Konfirmasi Pembayaran</button>
+    </form>
   </div>
 </body>
 </html>
