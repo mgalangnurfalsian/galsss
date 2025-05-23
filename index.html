@@ -1,100 +1,30 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="styleguide.css" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Lapak BSI - Keyboard UI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Layout</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="terang">
-    <div class="div">
-      <!-- Status Bar -->
-      <div class="status-bar">
-        <div class="left-side">
-          <div class="statusbar-time"><div class="time">9:41</div></div>
-        </div>
-        <div class="dynamic-island"></div>
-        <div class="right-side">
-          <div class="signal-wifi-battery">
-            <img class="icon-mobile-signal" src="img/mobile-signal.svg" alt="Sinyal" />
-            <img class="wifi" src="img/wifi.svg" alt="WiFi" />
-            <img class="statusbar-battery" src="img/statusbar-battery.svg" alt="Baterai" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Header -->
-      <div class="overlap-group">
-        <div class="text-wrapper-2">Lapak BSI</div>
-        <div class="rectangle"></div>
-        <img class="whatsapp-image" src="img/whatsapp-image-2025-05-14-at-20-27-34-1.png" alt="Gambar WhatsApp" />
-        <div class="rectangle-2"></div>
-      </div>
-
-      <!-- Keyboard -->
-      <div class="alphabetic-keyboard">
-        <div class="keys">
-          <!-- Top Row -->
-          <div class="top-row">
-            <div class="key"><div class="letter">Q</div></div>
-            <div class="letter-wrapper"><div class="text-wrapper">W</div></div>
-            <div class="div-wrapper"><div class="letter">E</div></div>
-            <div class="key-2"><div class="letter-2">R</div></div>
-            <div class="key-3"><div class="letter">T</div></div>
-            <div class="key-4"><div class="letter-2">Y</div></div>
-            <div class="key-5"><div class="letter-2">U</div></div>
-            <div class="key-6"><div class="letter">I</div></div>
-            <div class="key-7"><div class="text-wrapper">O</div></div>
-            <div class="key-8"><div class="letter">P</div></div>
-          </div>
-
-          <!-- Middle Row -->
-          <div class="middle-row">
-            <div class="key"><div class="letter">A</div></div>
-            <div class="key-9"><div class="letter-2">S</div></div>
-            <div class="key-10"><div class="letter-2">D</div></div>
-            <div class="key-11"><div class="letter">F</div></div>
-            <div class="key-12"><div class="letter-2">G</div></div>
-            <div class="key-13"><div class="letter">H</div></div>
-            <div class="key-14"><div class="letter-2">J</div></div>
-            <div class="key-15"><div class="letter-2">K</div></div>
-            <div class="key-16"><div class="letter">L</div></div>
-          </div>
-
-          <!-- Bottom Row -->
-          <div class="bottom-row">
-            <div class="keys-2">
-              <div class="key"><div class="letter">Z</div></div>
-              <div class="key-9"><div class="letter-2">X</div></div>
-              <div class="key-17"><div class="letter">C</div></div>
-              <div class="key-18"><div class="letter-3">V</div></div>
-              <div class="key-19"><div class="letter-2">B</div></div>
-              <div class="key-20"><div class="letter">N</div></div>
-              <div class="key-21"><div class="letter">M</div></div>
-            </div>
-            <div class="shift-active-wrapper">
-              <img class="shift-active" src="img/shift-active.svg" alt="Shift Aktif" />
-            </div>
-            <div class="union-wrapper">
-              <img class="union" src="img/union.svg" alt="Union" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Utility Row -->
-        <div class="bottom-row-2">
-          <div class="key-22"><div class="letter-4">123</div></div>
-          <div class="key-23"><div class="letter-5">space</div></div>
-          <div class="key-22"><div class="letter-4">return</div></div>
-        </div>
-
-        <!-- Emoji and Home Indicator -->
-        <img class="emoji-dictation" src="img/emoji-dictation.svg" alt="Emoji" />
-        <div class="home-indicator"><div class="home-indicator-2"></div></div>
-      </div>
+  <div class="keyboard">
+    <div class="row">
+      <button>Q</button><button>W</button><button>E</button><button>R</button><button>T</button>
+      <button>Y</button><button>U</button><button>I</button><button>O</button><button>P</button>
+    </div>
+    <div class="row">
+      <button>A</button><button>S</button><button>D</button><button>F</button><button>G</button>
+      <button>H</button><button>J</button><button>K</button><button>L</button>
+    </div>
+    <div class="row">
+      <button>Z</button><button>X</button><button>C</button><button>V</button><button>B</button>
+      <button>N</button><button>M</button>
+    </div>
+    <div class="row">
+      <button><img src="images/icon.png" alt="icon" width="20"></button>
+      <button>123</button>
+      <button class="space">Space</button>
+      <button>Return</button>
     </div>
   </div>
 </body>
