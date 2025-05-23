@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Top Up Game</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aplikasi Kasir Sederhana</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <div class="container">
-    <h1>Top Up Game</h1>
-    <form class="topup-form">
-      <label for="userId">Masukkan ID Pengguna:</label>
-      <input type="text" id="userId" placeholder="Contoh: 123456789" required>
+    <h1>Aplikasi Kasir Sederhana</h1>
 
-      <label for="nominal">Pilih Nominal Top Up:</label>
-      <select id="nominal" required>
-        <option value="">-- Pilih Nominal --</option>
-        <option value="10000">10.000</option>
-        <option value="20000">20.000</option>
-        <option value="50000">50.000</option>
-        <option value="100000">100.000</option>
-      </select>
+    <label for="namaBarang">Nama Barang</label>
+    <input type="text" id="namaBarang" placeholder="Masukkan nama barang" />
 
-      <button type="submit">Konfirmasi Pembayaran</button>
-    </form>
+    <label for="hargaSatuan">Harga Satuan (Rp)</label>
+    <input type="number" id="hargaSatuan" placeholder="Masukkan harga satuan" />
+
+    <label for="jumlah">Jumlah</label>
+    <input type="number" id="jumlah" placeholder="Masukkan jumlah barang" />
+
+    <button onclick="hitungTotal()">Hitung Total</button>
+
+    <div class="result" id="hasil"></div>
   </div>
+
+  <script>
+    function hitungTotal() {
+      const nama = document.getElementById('namaBarang').value.trim();
+      const harga = parseInt(document.getElementById('hargaSatuan').value);
+      const jumlah = parseInt(document.getElementById('jumlah').value);
+
+      if (!nama) {
+        alert('Mohon masukkan nama barang');
+        return;
+      }
+      if (isNaN(harga) || harga <= 0) {
+        alert('Mohon masukkan harga satuan yang valid');
+        return;
+      }
+      if (isNaN(jumlah) || jumlah <= 0) {
+        alert('Mohon masukkan jumlah barang yang valid');
+        return;
+      }
+
+      const total = harga * jumlah;
+
+      document.getElementById('hasil').textContent = 
+        `Total harga ${nama} (${jumlah} pcs) adalah Rp ${total.toLocaleString('id-ID')}`;
+    }
+  </script>
+
 </body>
 </html>
