@@ -1,143 +1,152 @@
-body {
-  background-color: #f8f9fa;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset sederhana */
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: flex-start;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  padding: 30px 20px;
+  color: #333;
 }
 
 .container {
-  background: white;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-  max-width: 700px;
-  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 25px;
-  color: #2c3e50;
+  color: #0080ff;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-form {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
+/* Form Input */
+form#formBarang {
+  margin-bottom: 30px;
 }
 
 .input-group {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 18px;
 }
 
 label {
+  display: block;
   font-weight: 600;
   margin-bottom: 6px;
-  color: #34495e;
+  color: #555;
 }
 
 input[type="text"],
 input[type="number"] {
-  padding: 8px 10px;
+  width: 100%;
+  padding: 10px 12px;
   font-size: 16px;
+  border: 1.8px solid #ccc;
   border-radius: 6px;
-  border: 1.5px solid #bdc3c7;
   transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-  border-color: #3498db;
+  border-color: #0080ff;
   outline: none;
 }
 
+/* Tombol Tambah ke Keranjang */
 .btn-add {
-  background-color: #27ae60;
+  background-color: #0080ff;
   color: white;
-  border: none;
   font-weight: 600;
-  font-size: 18px;
-  border-radius: 8px;
-  padding: 10px 18px;
-  cursor: pointer;
-  flex: 1 1 100px;
-  align-self: flex-end;
-  transition: background-color 0.25s ease;
-}
-
-.btn-add:hover {
-  background-color: #1e8449;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-thead th {
-  background-color: #3498db;
-  color: white;
-  padding: 12px 10px;
-  font-weight: 700;
-  text-align: center;
-  border-radius: 6px 6px 0 0;
-}
-
-tbody td {
-  padding: 10px 8px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-  font-size: 16px;
-}
-
-tfoot td {
-  padding: 12px 8px;
-  font-size: 18px;
-  font-weight: 700;
-  background-color: #ecf0f1;
-}
-
-.btn-bayar {
-  background-color: #e74c3c;
   border: none;
-  color: white;
+  padding: 12px 0;
   width: 100%;
-  padding: 15px 0;
-  font-size: 20px;
-  border-radius: 8px;
-  font-weight: 700;
+  font-size: 18px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn-bayar:disabled {
-  background-color: #c0392b;
-  cursor: not-allowed;
+.btn-add:hover {
+  background-color: #005bb5;
 }
 
-.btn-bayar:hover:enabled {
-  background-color: #b03a2e;
+/* Tabel Keranjang */
+table#tabelKeranjang {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
+table#tabelKeranjang thead tr {
+  background-color: #0080ff;
+  color: white;
+  font-weight: 600;
+}
+
+table#tabelKeranjang th,
+table#tabelKeranjang td {
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table#tabelKeranjang tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Tombol Aksi Hapus */
 .btn-hapus {
-  background-color: #e74c3c;
+  background-color: #ff4c4c;
+  color: white;
   border: none;
   padding: 6px 12px;
-  color: white;
   border-radius: 5px;
-  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.25s ease;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .btn-hapus:hover {
-  background-color: #c0392b;
+  background-color: #b32b2b;
+}
+
+/* Footer total bayar */
+tfoot td#totalBayar {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0080ff;
+}
+
+/* Tombol Bayar */
+#btnBayar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#btnBayar:disabled {
+  background-color: #a1d8a1;
+  cursor: not-allowed;
+}
+
+#btnBayar:hover:not(:disabled) {
+  background-color: #1e7e34;
 }
